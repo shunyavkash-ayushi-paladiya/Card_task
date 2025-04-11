@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --pink: #FC226A;
+    --blue: #01054C;
+    --gray:#757f95;
+    --theme:linear-gradient(to right, #fc226a 0%, #8c52ff 100%);
+}
+
+::selection{
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1240px;
+}
+
+.card-sec {
+    margin: 100px 0;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: calc(100% - (40 * 2)/3);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-num {
+    font-size: 120px;
+    font-weight: 800;
+    -webkit-text-stroke: 2px var(--pink);
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .15;
+    z-index: 1;
+}
+
+.card-img img{
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-img img{
+    transform: rotateY(360deg);
+}
+
+.card-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--blue);
+    margin-top: 12px;
+}
+
+.card-desc{
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 290px;
+    text-align: center;
+    color: var(--gray);
+    margin-top: 10px;
+}
+
+.card-a{
+    font-size: 18px;
+    font-weight:500 ;
+    margin-top: 10px;
+    display: flex;
+    align-items:center ;
+    gap: 10px;
+    border-radius: 30px;
+    color: var(--white);
+    background: var(--theme);
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-a svg{
+    transition: all 0.3s ease-in-out;
+}
+
+.card-a:hover svg{
+    transform: rotate(45deg);
+}
