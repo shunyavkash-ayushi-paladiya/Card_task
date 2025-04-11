@@ -64,7 +64,6 @@ svg {
 .cards{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     gap: 40px;
 }
@@ -91,8 +90,7 @@ svg {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    opacity: .15;
-    z-index: 1;
+    opacity: 0.2;
 }
 
 .card-img img{
