@@ -168,66 +168,23 @@ svg {
     color: var(--gray);
 }
 
-.card-a {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--black);
-    border: 2px solid var(--black);
-    border-radius: 30px;
-    padding: 8px 10px;
-    display: flex;
-    align-items: center;
-    display: inline-block;
-    gap: 10px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    white-space: nowrap;
+.card-a{
+   border: 2px solid var(--black);
+   border-radius: 30px;
+   padding: 5px;
+   transition: all 0.3s ease-in-out
 }
 
 .card-a svg {
     transition: all 0.3s ease-in-out;
-    width: 20px;
-    height: 20px;
 }
 
-.card-a:hover svg {
-    transform: rotate(45deg);
-}
-
-.card-a:hover {
+.card-main:hover .card-a{
+    background-color: var(--black);
     color: var(--white);
+    border: 2px solid var(--black);
 }
 
-.card-a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--black);
-    width: 0px;
-    height: 50%;
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-}
-
-.card-a:hover::after {
-    width: 100%;
-}
-
-.card-a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: var(--black);
-    width: 0px;
-    height: 50%;
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-}
-
-.card-a:hover::before {
-    width: 100%;
+.card-main:hover svg{
+    transform: rotate(45deg);
 }
